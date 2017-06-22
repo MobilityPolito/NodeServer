@@ -7,19 +7,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/api', function(req, res, next) {
-  //res.json( {'chiave' : 'prova dal server'} )
-
-  var dict = { 'key1' : 'ciao'}
-
-  res.json(JSON.parse(dict));
-});
-
-router.post('/api', function(req, res, next) {
-
-  console.log(req.body);
-  res.json({'chiave':'prova dal server'})
-  
-});
-
 module.exports = router;
